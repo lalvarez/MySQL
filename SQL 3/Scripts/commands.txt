@@ -1,0 +1,29 @@
+ALTER SESSION SET nls_numeric_characters=',.';
+@C:\Users\l04sd207\Downloads\fbd3-master\creationGriton.sql
+@C:\Users\l04sd207\Downloads\fbd3-master\scriptSoporteGriton.sql
+@C:\Users\l04sd207\Downloads\fbd3-master\insertGriton.sql
+@C:\Users\l04sd207\Downloads\fbd3-master\statisticsGriton.sql
+
+
+set serveroutput on
+begin
+PKG_COSTES.RUN_TEST;
+end;
+/
+
+
+
+SELECT TABLESPACE_NAME, STATUS, CONTENTS
+FROM USER_TABLESPACES;
+
+//borrar cluster
+
+DROP CLUSTER obs_radars_cluster INCLUDING TABLES CASCADE CONSTRAINTS;
+
+
+
+set serveroutput on
+set timing on
+set autotrace on
+
+set linesize 500
